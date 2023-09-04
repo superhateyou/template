@@ -7,7 +7,7 @@ module.exports = {
         alwaysTryTypes: true,
       },
       node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        extensions: [true, '.js', '.jsx', '.ts', '.tsx'],
       },
     },
   },
@@ -16,7 +16,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: './tsconfig.json',
   },
-  plugins: ['react-hooks', 'prettier', '@typescript-eslint'],
+  plugins: ['react-hooks', 'prettier', '@typescript-eslint', 'import'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
@@ -25,7 +25,6 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:react-hooks/recommended',
     'airbnb-typescript',
-    'prettier',
   ],
   rules: {
     'prettier/prettier': ['error', { quoteProps: 'consistent' }],
@@ -57,9 +56,30 @@ module.exports = {
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
     'jsx-a11y/control-has-associated-label': 'off',
     'jsx-a11y/label-has-associated-control': 'off',
+    'import/newline-after-import': 'off',
     'import/no-named-as-default': 'off',
     'import/prefer-default-export': 'off',
     'import/default': 'off',
+    'import/order': [
+      'error',
+      {
+        'newlines-between': 'always',
+        'groups': ['external', 'internal'],
+        'pathGroups': [
+          {
+            pattern: 'react',
+            group: 'external',
+            position: 'before',
+          },
+          {
+            pattern: 'src/**',
+            group: 'internal',
+            position: 'before',
+          },
+        ],
+        'pathGroupsExcludedImportTypes': ['builtin'],
+      },
+    ],
     'import/no-extraneous-dependencies': [
       'error',
       {
@@ -67,13 +87,13 @@ module.exports = {
       },
     ],
     'import/extensions': [
-      'error',
+      'off',
       'ignorePackages',
       {
-        js: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
+        js: 'off',
+        jsx: 'off',
+        ts: 'off',
+        tsx: 'off',
       },
     ],
     '@typescript-eslint/no-explicit-any': 'off',

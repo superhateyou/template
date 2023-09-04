@@ -1,0 +1,13 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-sass-guidelines"],
+  "plugins": ["stylelint-scss"],
+  "rules": {
+    "selector-max-id": 1,
+    "no-descending-specificity": null,
+    "selector-max-compound-selectors": 3,
+    "max-nesting-depth": 4,
+    "selector-no-qualifying-type": true,
+    "scss/at-import-no-partial-leading-underscore": true,
+    "scss/dollar-variable-pattern": "^[_a-z]+[_a-z0-9-]*$"
+  }
+}

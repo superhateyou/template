@@ -19,7 +19,16 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* Other options */
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "downlevelIteration": true,
+    "declaration": true,
+    "removeComments": true,
+    "importHelpers": true
   },
   "include": ["src", "./.eslintrc.cjs"],
   "references": [{ "path": "./tsconfig.node.json" }]
