@@ -3,7 +3,6 @@
   "plugins": ["stylelint-scss"],
   "rules": {
     "function-url-quotes": "never",
-    "quote-type": "single",
     "selector-max-id": 1,
     "no-descending-specificity": null,
     "selector-max-compound-selectors": 3,
