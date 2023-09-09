@@ -25,6 +25,7 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:react-hooks/recommended',
     'airbnb-typescript',
+    'plugin:json/recommended',
   ],
   rules: {
     'prettier/prettier': ['error', { quoteProps: 'consistent' }],
