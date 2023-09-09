@@ -15,7 +15,6 @@
     "remove-modules": "rimraf node_modules",
     "reinstall": "npm run remove-modules && npm install && npm run optimize",
     "precommit": "lint-staged",
-    "prepare": "husky install"
   },
   "dependencies": {
     "axios": "^1.5.0",
@@ -46,7 +45,6 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
-    "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "postcss-import": "^15.1.0",
     "prettier": "3.0.3",
@@ -60,7 +58,6 @@
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
     "vite-plugin-compression": "^0.5.1",
-    "vite-plugin-env-compatible": "^1.1.1",
     "vite-plugin-stylelint": "^5.1.1"
   }
 }
