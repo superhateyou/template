@@ -1,15 +1,6 @@
 {
-  "extends": ["stylelint-config-standard"],
-  "plugins": ["stylelint-scss"],
+  "extends": ["stylelint-config-standard-scss"],
   "rules": {
-    "function-url-quotes": "never",
-    "selector-max-id": 1,
-    "no-descending-specificity": null,
-    "selector-max-compound-selectors": 3,
-    "max-nesting-depth": 4,
-    "selector-no-qualifying-type": true,
-    "scss/at-import-no-partial-leading-underscore": null,
-    "scss/dollar-variable-pattern": "^[_a-z]+[_a-z0-9-]*$",
-    "function-url-no-scheme-relative": true
+    "no-invalid-double-slash-comments": null
   }
 }
