@@ -8,7 +8,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "prettier": "prettier --write src/**/*.{ts,tsx} --config ./.prettierrc",
-    "lint": "eslint \"**\\\\*.{ts,tsx,json}\" --quiet --color --report-unused-disable-directives --max-warnings 0 --fix",
+    "lint": "eslint \"**\\\\*.{ts,tsx,json}\" --quiet --color --cache --report-unused-disable-directives --max-warnings 0 --fix",
     "stylelint": "stylelint \"src/**/*.scss\" --fix",
     "format": "npm run lint && npm run prettier && npm run stylelint",
     "optimize": "npm dedupe && npm shrinkwrap",
