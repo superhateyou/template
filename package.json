@@ -4,9 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "install": "npm install && npm run optimize",
-    "optimize": "npm dedupe && npm shrinkwrap",
-    "reinstall": "npm run remove-modules && npm install && npm run optimize",
+    "preinstall": "npx only-allow pnpm",
+    "reinstall": "pnpm remove-modules && pnpm install",
     "remove-modules": "rimraf node_modules",
     "dev": "vite",
     "build": "tsc && vite build",
@@ -14,7 +13,7 @@
     "prettier": "prettier --write src/**/*.{ts,tsx} --config ./.prettierrc",
     "lint": "eslint \"**\\\\*.{ts,tsx,json}\" --quiet --color --cache --report-unused-disable-directives --max-warnings 0 --fix",
     "stylelint": "stylelint \"src/**/*.scss\" --fix",
-    "format": "npm run lint && npm run prettier && npm run stylelint",
+    "format": "pnpm lint && pnpm prettier && run stylelint",
     "precommit": "lint-staged"
   },
   "dependencies": {
