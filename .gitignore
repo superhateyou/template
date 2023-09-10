@@ -15,6 +15,7 @@ dist-ssr
 # Lock files
 package-lock.json
 npm-shrinkwrap.json
+pnpm-lock.yaml
 
 # Cache
 .stylelintcache
