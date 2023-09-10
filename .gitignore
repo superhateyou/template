@@ -18,6 +18,7 @@ npm-shrinkwrap.json
 
 # Cache
 .stylelintcache
+.eslintcache
 
 # Env
 *.env
